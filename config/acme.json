@@ -1,5 +1,5 @@
 {
-  "Email": "rl@link2b.fr",
+  "Email": "stephane.koeberle@gmail.com",
   "Registration": {
     "body": {
       "resource": "reg",
@@ -10,7 +10,7 @@
         "e": "AQAB"
       },
       "contact": [
-        "mailto:rl@link2b.fr"
+        "mailto:stephane.koeberle@gmail.com"
       ],
       "agreement": "https://letsencrypt.org/documents/LE-SA-v1.1.1-August-1-2016.pdf"
     },
