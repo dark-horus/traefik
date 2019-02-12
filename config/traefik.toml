@@ -1,7 +1,5 @@
 logLevel = "DEBUG"
 
-#Local: comment the next line and uncomment the other one
-#defaultEntryPoints = ["http", "https"]
 defaultEntryPoints = ["http"]
 
 [entryPoints]
@@ -9,31 +7,13 @@ defaultEntryPoints = ["http"]
   address = ":80"
   [entryPoints.https]
   address = ":443"
-    #Local: comment the next line
-    #[entryPoints.https.tls]
-
-#Local: comment the 4 lines behind and the line 'caServer'
-#[acme]
-#email = "stephane.koeberle@gmail.com"
-#storage = "/etc/traefik/acme.json"
-#onHostRule = true
-
-#To make test uncomment the first line and comment the second one
-#caServer = "https://acme-staging.api.letsencrypt.org/directory"
-#caServer = "https://acme-v02.api.letsencrypt.org/directory"
-
-#Local: comment the 6 next lines
-#entryPoint = "https"
-    #[acme.httpChallenge]
-    #entryPoint = "http"
-#[[acme.domains]]
-#    main = "smokeymounta.in"
-#    sans = ["pma.smokeymounta.in"]
 
 [web]
-address = ":8080"
+  address = ":8080"
 
 [docker]
-endpoint = "unix:///var/run/docker.sock"
-domain = "docker.localhost"
-watch = true
+  endpoint = "unix:///var/run/docker.sock"
+  watch = true
+
+[traefikLog]
+  filePath = "/var/log/traefik.log"
